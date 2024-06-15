@@ -43,32 +43,32 @@ int fib(int n){
 int main()
 {
     // 1: Simple loops
-    printf("Fibonacci sequence for %d numbers\r\n", max_n);
-    printf("Number %d: %d \r\n", 1, 0); 
-    printf("Number %d: %d \r\n", 2, 1);
+    // printf("Fibonacci sequence for %d numbers\r\n", max_n);
+    // printf("Number %d: %d \r\n", 1, 0); 
+    // printf("Number %d: %d \r\n", 2, 1);
 
-    for( int i=2; i<max_n; i++){
-        blink = 0; // turn led off
+    // for( int i=2; i<max_n; i++){
+    //     blink = 0; // turn led off
         
-        t_n = t_1 + t_2;
-        t_1 = t_2;
-        t_2 = t_n;
-        printf("Number %d: %d \r\n", i+1, t_n);
+    //     t_n = t_1 + t_2;
+    //     t_1 = t_2;
+    //     t_2 = t_n;
+    //     printf("Number %d: %d \r\n", i+1, t_n);
 
-        thread_sleep_for(blink_period);
-        blink = 1; // turn led on
-        thread_sleep_for(blink_period);
+    //     thread_sleep_for(blink_period);
+    //     blink = 1; // turn led on
+    //     thread_sleep_for(blink_period);
         
-    }
-
-    // 2: Recursive loop
-    // printf("Finbonachi sequence for %d numbers using a recursive function\r\n", max_n);
-    // for(int i=0; i<max_n; i++){
-    //     printf("Number %d: %d \r\n", i+1, fib(i));
-    //     thread_sleep_for(500);
     // }
 
-    // printf("\r\n");
+    // 2: Recursive loop
+    printf("Finbonachi sequence for %d numbers using a recursive function\r\n", max_n);
+    for(int i=0; i<max_n; i++){
+        printf("Number %d: %d \r\n", i+1, fib(i));
+        thread_sleep_for(500);
+    }
+
+    printf("\r\n");
    
    return 0;
 }
